@@ -1,5 +1,5 @@
 {% set name = "azure-mgmt-core" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: a3906fa77edfedfcc3229dc3b69489d5ed63b107c7eacbc50092e6cbfbfd83f0
+  sha256: 4246810996107f72482a9351cf918d380c257e90942144ec9c0c2abda1d0a312
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -29,7 +29,7 @@ test:
     - azure.mgmt.core
 
 about:
-  home:  https://github.com/Azure/azure-sdk-for-python
+  home: https://github.com/Azure/azure-sdk-for-python
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
